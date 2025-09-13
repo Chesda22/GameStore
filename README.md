@@ -1,6 +1,6 @@
 # GameStore
 
-A simple React TypeScript game store application.
+A React TypeScript game store application with interactive features.
 
 ## Getting Started
 
@@ -20,6 +20,19 @@ npm start
 
 ## Features
 
-- Dark theme with gray background
-- Responsive header navigation
-- Built with React and TypeScript
+- **Interactive Game Store**: Browse and add games to cart
+- **Pixel Art Elements**: Interactive door and chest with messages
+- **Shopping Cart System**: Add/remove games, calculate totals
+- **Dark Theme**: Modern dark gray design
+- **Sound Effects**: Minecraft-style door sound
+- **Responsive Design**: Works on desktop and mobile
+- **TypeScript**: Full type safety and better development experience
+- **Component Architecture**: Modular React components
+
+## Technologies Used
+
+- React 18
+- TypeScript
+- CSS3 (Grid, Flexbox, Animations)
+- Web Audio API
+- SVG Graphics

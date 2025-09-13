@@ -1,0 +1,476 @@
+.app {
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  position: relative;
+}
+
+.header {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #404040;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.main-content {
+  padding: 2rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.container p {
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+/* Games Section Styles */
+.games-section {
+  margin: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.section-title:hover {
+  color: #cccccc;
+}
+
+.games-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.games-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Game Card Styles */
+.game-card {
+  min-width: 180px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.game-card:focus {
+  outline: 2px solid #4a9eff;
+  outline-offset: 2px;
+}
+
+.game-card:focus:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.game-icon {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-emoji {
+  font-size: 2rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.game-details {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.game-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-number {
+  font-size: 0.8rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.rating-star {
+  font-size: 0.8rem;
+  color: #333333;
+}
+
+.game-price {
+  font-size: 0.8rem;
+  color: #666666;
+  background-color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Interactive Elements Styles */
+.interactive-section {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+}
+
+.door-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  order: 1;
+  min-width: 200px; /* Fixed width to prevent movement */
+}
+
+.door-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transform: scale(0.7); /* Make door smaller */
+  position: relative;
+  z-index: 2; /* Keep door above message */
+  width: 120px;
+  height: 160px;
+}
+
+.door-wrapper:hover {
+  transform: scale(0.75);
+}
+
+.door-wrapper:active {
+  transform: scale(0.65);
+}
+
+.chest-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  order: 2; /* Put chest in middle */
+  min-width: 200px; /* Fixed width to prevent movement */
+}
+
+.chest-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transform: scale(0.7); /* Make chest same size as door */
+  position: relative;
+  z-index: 2; /* Keep chest above message */
+  width: 120px;
+  height: 160px;
+}
+
+.chest-wrapper:hover {
+  transform: scale(0.75);
+}
+
+.chest-wrapper:active {
+  transform: scale(0.65);
+}
+
+.welcome-message {
+  position: absolute;
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4a9eff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(74, 158, 255, 0.3);
+  animation: hoverFloat 2s ease-in-out infinite;
+  white-space: nowrap;
+  font-family: "Courier New", monospace;
+  image-rendering: pixelated;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  border: 2px solid #ffffff;
+  z-index: 3;
+}
+
+.chest-message {
+  position: absolute;
+  right: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffd700;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  animation: hoverFloat 2s ease-in-out infinite;
+  white-space: nowrap;
+  font-family: "Courier New", monospace;
+  image-rendering: pixelated;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+  border: 2px solid #000000;
+  z-index: 3;
+}
+
+@keyframes hoverFloat {
+  0%,
+  100% {
+    transform: translateY(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-5px);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  20%,
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+
+/* Cart Styles */
+.cart-section {
+  margin: 3rem 0;
+}
+
+.cart-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.cart-table {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  flex: 1;
+}
+
+.cart-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: bold;
+  color: #333333;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.cart-game {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-name {
+  font-weight: 500;
+  color: #333333;
+}
+
+.cart-price {
+  font-weight: 600;
+  color: #333333;
+}
+
+.remove-button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: #cc0000;
+}
+
+.remove-button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #666666;
+  font-style: italic;
+}
+
+.cart-total {
+  padding: 1rem 0;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.purchase-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.purchase-button {
+  background-color: #4a9eff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.purchase-button:hover {
+  background-color: #357abd;
+}
+
+.purchase-button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.thank-you-message {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: fadeInOut 3s ease-in-out;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  border: 2px solid #ffffff;
+  min-width: 200px;
+  text-align: center;
+}
